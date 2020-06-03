@@ -30,22 +30,37 @@
 // Sommiamo i due numeri e dichiariamo chi ha
 // vinto.
 
-gioco('dispari', 1);
 
-function gioco(scelta, numeroUtente){
+
+
 //L'utente sceglie pari o dispari
-  var scelta = prompt('Pari o dispari');
-  // console.log(scelta);
-  var numeroUtente = parseInt(prompt('Inserisci un numero da 1 a 5'));
-  // console.log(numeroUtente);
-  var numeroComputer =  Math.floor(Math.random() * 5) + 1;
-  // console.log(numeroComputer);
-  var somma = numeroUtente + numeroComputer;
-  // console.log(somma);
-  if (somma % 2 == 0) {
-    console.log('Vince il pari');
+var scelta = prompt('Pari o dispari');
+console.log(scelta);
+var numeroUtente = parseInt(prompt('Inserisci un numero da 1 a 5'));
+console.log(numeroUtente);
+var numeroComputer =  Math.floor(Math.random() * 5) + 1;
 
-  }else if (somma % 2 !== 0) {
-    console.log('Vince il dispari');
+console.log(numeroComputer);
+var somma = numeroUtente + numeroComputer;
+console.log(somma);
+var sommaPariODispari = sePariODispari(somma);
+var messaggio;
+if (sommaPariODispari === 'pari' || sommaPariODispari === 'dispari' ) {
+ messaggio = "hai vinto";
+
+}else {
+  messaggio = "hai perso";
+}
+console.log(messaggio);
+
+
+function sePariODispari(numero) {
+  var risultato;
+  if (numero % 2 == 0) {
+    return risultato = 'pari';
+
+  }else if (numero % 2 != 0) {
+    return risultato = 'dispari';
   }
+ console.log(numero);
 }
