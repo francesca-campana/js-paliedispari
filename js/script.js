@@ -45,8 +45,9 @@ var somma = numeroUtente + numeroComputer;
 console.log(somma);
 var sommaPariODispari = sePariODispari(somma);
 var messaggio;
-if (sommaPariODispari === 'pari' || sommaPariODispari === 'dispari' ) {
+if (sommaPariODispari === scelta ) {
  messaggio = "hai vinto";
+ console.log(sommaPariODispari);
 
 }else {
   messaggio = "hai perso";
